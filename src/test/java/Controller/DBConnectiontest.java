@@ -20,7 +20,8 @@ public class DBConnectiontest {
     public void testConnection(){
         try(Connection con = ds.getConnection()){
             System.out.println(("MariaDB 연결 성공 : " + con));
-        }catch (Exception e) { e.printStackTrace();
+        }catch (Exception e){
+            e.printStackTrace();
         }
     }
 }
