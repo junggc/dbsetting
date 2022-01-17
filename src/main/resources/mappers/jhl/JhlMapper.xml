@@ -6,11 +6,16 @@
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
 <!--namespace에는  xml파일이랑 이어질 클래스파일 > 즉 DAO 라는 클래스의 경로인거임-->
-<mapper namespace="com.kacelab.study.Dao.DeveloperMapper">
+<mapper namespace="mappers.JhlMapper">
 
-    <select id="test" resultType="jhl" parameterType="jhl">
+    <select id="test" resultType="com.kacelab.practice.Dto.BDto" >
         <!-- 이 테이블에서 조회한 내용들을 Dto에 매핑시켜서 리턴해준다-->
-        select * from developer
+        select * from DEVELOPER
     </select>
+
+    <insert id="myid" parameterType="com.kacelab.practice.Dto.BDto">
+        INSERT INTO DEVELOPER NAME(USERID) VALUES(#{JGC2270});
+
+    </insert>
 
 </mapper>

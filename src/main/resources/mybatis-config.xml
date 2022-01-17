@@ -7,8 +7,8 @@
 
 <configuration>
 
-    <typeAliases>
-        <typeAlias alias="jhl" type="com.kacelab.study.Controller.Dto"/>
-    </typeAliases>
+<!--    <typeAliases>-->
+<!--        <typeAlias alias="jhl" type="com.kacelab.study.Controller.Dto"/>-->
+<!--    </typeAliases>-->
 
 </configuration>

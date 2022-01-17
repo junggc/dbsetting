@@ -1,6 +1,7 @@
 package com.kacelab.practice.Service;
 
 
+import com.kacelab.practice.Controller.BController;
 import com.kacelab.practice.Dao.DeveloperMapper;
 import com.kacelab.practice.Dto.BDto;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -12,7 +13,7 @@ import java.util.List;
 @Service
 public class BService {
 
-    @Autowired
+    @Autowired(required = false)
     private DeveloperMapper developerMapper;
 //    public String TDto(TheDto thedto){
 
@@ -24,11 +25,12 @@ public class BService {
 
 
         }catch(Exception e){
+            e.printStackTrace();
             list = new ArrayList();
+
             throw new Exception("메시지");
+
         }
-
-
         return list;
 
 
@@ -39,6 +41,11 @@ public class BService {
 //        System.out.println(thedto.getCc()+" =cc");
 //        System.out.println(thedto.getCc()+" =ee");
 
+
+    }
+    public void test2(BDto bdto){
+        DeveloperMapper developerMapper = new DeveloperMapper();
+        developerMapper.myid(bdto);
 
     }
 }
