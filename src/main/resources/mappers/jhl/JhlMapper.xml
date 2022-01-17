@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<!--namespace에는  xml파일이랑 이어질 클래스파일 > 즉 DAO 라는 클래스의 경로인거임-->
+<mapper namespace="com.kacelab.study.Dao.DeveloperMapper">
+
+    <select id="test" resultType="jhl" parameterType="jhl">
+        <!-- 이 테이블에서 조회한 내용들을 Dto에 매핑시켜서 리턴해준다-->
+        select * from developer
+    </select>
+
+</mapper>

@@ -13,7 +13,7 @@
         <property name="order" value="1"/>
     </bean>
 
-    <context:component-scan base-package="Controller"/>
+    <context:component-scan base-package="com.kacelab.practice"/>
 
 
 </beans>
