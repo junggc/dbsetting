@@ -11,6 +11,6 @@
     <title>$Title$</title>
   </head>
   <body>
-  $END$
+  <button type="button" onclick="location.href='/insertpage'" class="btn btn-primary">인서트페이지로 가세요</button>
   </body>
 </html>

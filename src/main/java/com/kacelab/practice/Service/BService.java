@@ -44,8 +44,11 @@ public class BService {
 
     }
     public void test2(BDto bdto){
-        DeveloperMapper developerMapper = new DeveloperMapper();
+//        DeveloperMapper developerMapper = new DeveloperMapper();
         developerMapper.myid(bdto);
-
     }
+//    public void test3(BDto bdto){
+//        developerMapper.myid(bdto);
+//    }
+
 }

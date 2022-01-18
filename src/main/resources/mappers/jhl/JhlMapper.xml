@@ -14,8 +14,11 @@
     </select>
 
     <insert id="myid" parameterType="com.kacelab.practice.Dto.BDto">
-        INSERT INTO DEVELOPER NAME(USERID) VALUES(#{JGC2270});
-
+        INSERT INTO DEVELOPER (NAME) VALUES(#{bb});
     </insert>
+<!--    <delete id="myid" parameterType="com.kacelab.practice.Dto.BDto">-->
+<!--        DELETE FROM DEVELOPER WHERE ID=13;-->
+<!--    </delete>-->
+
 
 </mapper>

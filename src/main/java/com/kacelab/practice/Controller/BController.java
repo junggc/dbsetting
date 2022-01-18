@@ -26,12 +26,9 @@ public class BController {
 //        Map<String ,Object> map = new HashMap<String ,Object>();
 //        List<Object> lst = new ArrayList<Object>();
 //        String[] ab = new String[3];
-
         List<BDto> b = bService.test(bdto);
         model.addAttribute("developerlist",b);
-
         return "index";
-
     }
     @RequestMapping(value ="/insertpage")
     public String main2(){
@@ -39,9 +36,9 @@ public class BController {
     }
     @RequestMapping(value ="/complete")
     public String main3(HttpServletRequest httpServletRequest,@ModelAttribute BDto bDto,Model model ){
-    BService bservice = new BService();
-    bservice.test2(bDto);
-        return "testend";
-
+//    BService bservice = new BService();
+    bService.test2(bDto);
+//    bService.test3(bDto);
+        return "tend";
     }
 }
