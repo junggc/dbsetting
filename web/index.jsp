@@ -11,6 +11,6 @@
     <title>$Title$</title>
   </head>
   <body>
-  <button type="button" onclick="location.href='/insertpage'" class="btn btn-primary">인서트페이지로 가세요</button>
+  <button type="button" onclick="location.href='/htmlpractice'" class="btn btn-primary">회원가입 화면으로 이동합니다.</button>
   </body>
 </html>

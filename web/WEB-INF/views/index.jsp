@@ -12,5 +12,6 @@
 </head>
 <body>
  성공페이지
+ <button type="button" onclick="location.href='/htmlpractice'">돌아가기</button>
 </body>
 </html>

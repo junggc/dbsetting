@@ -20,8 +20,8 @@ public class DeveloperMapper {
     }
     public void myid(BDto bDto ){
         System.out.println("fff");
-        sqlSession.update("mappers.JhlMapper.myid",bDto);
 //        sqlSession.update("mappers.JhlMapper.myid",bDto);
+        sqlSession.insert("mappers.JhlMapper.mid",bDto);
 //        sqlSession.delete("mappers.JhlMapper.myid",bDto);
         System.out.println("popo");
 //        sqlSession.update("mappers.JhlMapper.myid",bDto);
