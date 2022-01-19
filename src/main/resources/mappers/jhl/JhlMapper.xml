@@ -13,9 +13,13 @@
         select * from DEVELOPER
     </select>
 
-    <insert id="myid" parameterType="com.kacelab.practice.Dto.BDto">
-        INSERT INTO DEVELOPER (NAME) VALUES(#{bb});
-    </insert>
+<!--    <insert id="myid" parameterType="com.kacelab.practice.Dto.BDto">-->
+<!--        INSERT INTO DEVELOPER (NAME) VALUES(#{bb});-->
+<!--    </insert>-->
+
+    <update id="myid" parameterType="com.kacelab.practice.Dto.BDto">
+        UPDATE DEVELOPER SET AGE=21 WHERE ID=14;
+    </update>
 <!--    <delete id="myid" parameterType="com.kacelab.practice.Dto.BDto">-->
 <!--        DELETE FROM DEVELOPER WHERE ID=13;-->
 <!--    </delete>-->

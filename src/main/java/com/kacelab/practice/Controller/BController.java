@@ -34,11 +34,13 @@ public class BController {
     public String main2(){
         return "test1";
     }
+
     @RequestMapping(value ="/complete")
     public String main3(HttpServletRequest httpServletRequest,@ModelAttribute BDto bDto,Model model ){
 //    BService bservice = new BService();
-    bService.test2(bDto);
+        bService.test2(bDto);
 //    bService.test3(bDto);
+//        bService.test4(bDto);
         return "tend";
     }
 }

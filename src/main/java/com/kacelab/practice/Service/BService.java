@@ -1,7 +1,6 @@
 package com.kacelab.practice.Service;
 
 
-import com.kacelab.practice.Controller.BController;
 import com.kacelab.practice.Dao.DeveloperMapper;
 import com.kacelab.practice.Dto.BDto;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -15,40 +14,28 @@ public class BService {
 
     @Autowired(required = false)
     private DeveloperMapper developerMapper;
-//    public String TDto(TheDto thedto){
 
-    public List<BDto> test(BDto dto)throws Exception{
+    //    public String TDto(TheDto thedto){
+    public List<BDto> test(BDto dto) throws Exception {
         List<BDto> list = null;
-        try{
-
+        try {
             list = developerMapper.test(dto);
 
-
-        }catch(Exception e){
+        } catch (Exception e) {
             e.printStackTrace();
             list = new ArrayList();
 
             throw new Exception("메시지");
-
         }
         return list;
-
-
-
-
-
 //        System.out.println(thedto.getBb()+" =bb");
 //        System.out.println(thedto.getCc()+" =cc");
 //        System.out.println(thedto.getCc()+" =ee");
-
-
     }
-    public void test2(BDto bdto){
+
+    public void test2(BDto bdto) {
 //        DeveloperMapper developerMapper = new DeveloperMapper();
         developerMapper.myid(bdto);
     }
-//    public void test3(BDto bdto){
-//        developerMapper.myid(bdto);
-//    }
 
 }
