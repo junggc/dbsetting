@@ -50,13 +50,6 @@
                     BIRTH:{required:"필수입력사항 입니다.",maxLength:"10자 이하로 입력 하세요"}
                 },
 
-                submitHandler: function(form) {
-
-                     form.submit();
-
-                },
-
-
                 errorPlacement: function(error, element) {
 
                 }
