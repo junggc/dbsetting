@@ -9,14 +9,17 @@
 
 <html>
 <head>
+
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/jquery.validate.min.js"></script>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.3/dist/additional-methods.min.js"></script>
+
 <%--    <script--%>
 <%--            src="http://code.jquery.com/jquery-3.5.1.js"--%>
 <%--            integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="--%>
 <%--            crossorigin="anonymous">--%>
 <%--    </script>--%>
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/jquery.validate.min.js"></script>
-    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.3/dist/additional-methods.min.js"></script>
+
 
     <title>html연습시간</title>
     <script>
@@ -62,7 +65,7 @@
     </script>
 </head>
 <body>
-
+<form action="/complete" id="mytable" method="post">
     <table border="30">
         <tr>
             <th>USERID</th>
