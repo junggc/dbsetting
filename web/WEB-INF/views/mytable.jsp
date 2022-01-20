@@ -9,11 +9,15 @@
 
 <html>
 <head>
-    <script
-            src="http://code.jquery.com/jquery-3.5.1.js"
-            integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
-            crossorigin="anonymous">
-    </script>
+<%--    <script--%>
+<%--            src="http://code.jquery.com/jquery-3.5.1.js"--%>
+<%--            integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="--%>
+<%--            crossorigin="anonymous">--%>
+<%--    </script>--%>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/jquery.validate.min.js"></script>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.3/dist/additional-methods.min.js"></script>
+
     <title>html연습시간</title>
     <script>
         $(function (){
@@ -42,6 +46,14 @@
                     COUNTRY:{required:"필수입력사항 입니다.",maxLength:"20자 이하로 입력 하세요"},
                     BIRTH:{required:"필수입력사항 입니다.",maxLength:"10자 이하로 입력 하세요"}
                 },
+
+                submitHandler: function(form) {
+
+                     form.submit();
+
+                },
+
+
                 errorPlacement: function(error, element) {
 
                 }
@@ -50,16 +62,15 @@
     </script>
 </head>
 <body>
-<form id="mytable" method="post" action="/complete">
-    <div>
+
     <table border="30">
         <tr>
             <th>USERID</th>
-            <th><input type="text" id="USERID" name="USERID"/></th>
+            <th><input type="text" id="userid" name="userid"/></th>
         </tr>
         <tr>
             <th>PASSWORD</th>
-            <th><input type="text" id="PASSWORD" name="PASSWORD"/></th>
+            <th><input type="text" id="password" name="password"/></th>
         </tr>
         <tr>
             <th>NAME</th>
@@ -95,10 +106,8 @@
         </tr>
     </table>
     <button type="submit" >가입합니다.</button>
-        </div>
+
 </form>
-
-
 
 </body>
 </html>
