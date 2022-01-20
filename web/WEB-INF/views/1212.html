@@ -1,19 +1,9 @@
-<%--
-  Created by IntelliJ IDEA.
-  User: wjdrm
-  Date: 2022-01-19
-  Time: 오후 8:36
-  To change this template use File | Settings | File Templates.
---%>
-<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<!DOCTYPE html>
 
 <html>
 <head>
-    <script
-            src="http://code.jquery.com/jquery-3.5.1.js"
-            integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
-            crossorigin="anonymous">
-    </script>
+    <meta charset="UTF-8">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <title>html연습시간</title>
     <script>
         $(function (){
@@ -52,50 +42,50 @@
 <body>
 <form id="mytable" method="post" action="/complete">
     <div>
-    <table border="30">
-        <tr>
-            <th>USERID</th>
-            <th><input type="text" id="USERID" name="USERID"/></th>
-        </tr>
-        <tr>
-            <th>PASSWORD</th>
-            <th><input type="text" id="PASSWORD" name="PASSWORD"/></th>
-        </tr>
-        <tr>
-            <th>NAME</th>
-            <th><input type="text" id="NAME" name="NAME"/></th>
-        </tr>
-        <tr>
-            <th>AGE</th>
-            <th><input type="text" id="AGE" name="AGE"/></th>
-        </tr>
-        <tr>
-            <th>GENDER</th>
-            <th><input type="text" id="GENDER" name="GENDER"/></th>
-        </tr>
-        <tr>
-            <th>ADDRESS</th>
-            <th><input type="text" id="ADDRESS" name="ADDRESS"/></th>
-        </tr>
-        <tr>
-            <th>PHONE</th>
-            <th><input type="tel" id="PHONE" name="PHONE"/></th>
-        </tr>
-        <tr>
-            <th>EMAIL</th>
-            <th><input type="text" id="EMAIL" name="EMAIL"/></th>
-        </tr>
-        <tr>
-            <th>COUNTRY</th>
-            <th><input type="text" id="COUNTRY" name="COUNTRY"/></th>
-        </tr>
-        <tr>
-            <th>BIRTH</th>
-            <th><input type="text" id="BIRTH" name="BIRTH"/></th>
-        </tr>
-    </table>
-    <button type="submit" >가입합니다.</button>
-        </div>
+        <table border="30">
+            <tr>
+                <th>USERID</th>
+                <th><input type="text" id="userid" name="USERID"/></th>
+            </tr>
+            <tr>
+                <th>PASSWORD</th>
+                <th><input type="text" name="PASSWORD"/></th>
+            </tr>
+            <tr>
+                <th>NAME</th>
+                <th><input type="text" name="NAME"/></th>
+            </tr>
+            <tr>
+                <th>AGE</th>
+                <th><input type="text" name="AGE"/></th>
+            </tr>
+            <tr>
+                <th>GENDER</th>
+                <th><input type="text" name="GENDER"/></th>
+            </tr>
+            <tr>
+                <th>ADDRESS</th>
+                <th><input type="text" name="ADDRESS"/></th>
+            </tr>
+            <tr>
+                <th>PHONE</th>
+                <th><input type="tel" name="PHONE"/></th>
+            </tr>
+            <tr>
+                <th>EMAIL</th>
+                <th><input type="text" name="EMAIL"/></th>
+            </tr>
+            <tr>
+                <th>COUNTRY</th>
+                <th><input type="text" name="COUNTRY"/></th>
+            </tr>
+            <tr>
+                <th>BIRTH</th>
+                <th><input type="text" name="BIRTH"/></th>
+            </tr>
+        </table>
+        <button type="submit" >가입합니다.</button>
+    </div>
 </form>
 
 
