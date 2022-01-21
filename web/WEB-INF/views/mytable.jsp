@@ -45,29 +45,37 @@
                 //     console.log('error',error);
                 // }
             });
-            $("button").click(function(){
+            $("#button").click(function(){
 
-                $("div").text($("form").
+                // $("div").text($("form").
+                alert("가입완료!");
                 $.ajax(
-                    {
-                        url: "demo_test.txt"
+                    { //modelattribute로 보내고 json으로 받을떄 start
+                        //@ModelAttribute Dto dto
+                        url: "/complete"
                         , type :'post'
-                        , data :{}
-                        , contentType : 'json'
+                        , data :$("#mytable").serialize()
+                        , contentType : 'application/x-www-form-urlencoded; charset=UTF-8'
+                        //modelattribute 로 받고 json 으로 받을때 end
                         , beforeSend(xhr){
-
+                            // console.log('beforeSend xhr',xhr);
                         }
+                        //타고 와서 여기부터 결과쪽
                         , dataFilter(data,type){
-
+                      //      console.log('dataFilter data',data);
+                            return data;
                         }
                         , success: function (result) {
+              //              console.log('success result', result);
+
                             $("#div1").html(result);
+
                         }
                         , complete(xhr,status){
-
+             //               console.log('complete xhr',xhr);
                         }
                         , error(xhr,status,error){
-
+                //            console.log('error xhr',xhr);
                         }
                     }
                 );
@@ -76,7 +84,7 @@
     </script>
 </head>
 <body>
-<form action="/complete" id="mytable" method="post">
+<form  id="mytable" method="post">
     <table border="1">
         <tr>
             <th>USERID</th>
@@ -119,8 +127,8 @@
             <th><input type="text" id="BIRTH" name="BIRTH"/></th>
         </tr>
     </table>
-    <button type="submit" >가입 전용 버튼</button>
-    <div1 id="div1"></div1>
+    <button type="submit" id="button" >가입 전용 버튼</button>
+    <div id="div1"></div>
 
 </form>
 
