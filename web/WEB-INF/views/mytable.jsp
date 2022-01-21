@@ -18,33 +18,59 @@
         $(function (){
             $("#mytable").validate({
                 rules:{
-                    USERID:{required:true},
-                    PASSWORD:{required: true,maxLength: 20},
-                    NAME:{required:true,maxLength:300},
-                    AGE:{required:true,maxLength:10},
-                    GENDER:{required:true,maxLength:10},
-                    ADDRESS:{required:true,maxLength:500},
-                    PHONE:{required:true,maxLength:20},
-                    EMAIL:{required:true,maxLength:100},
-                    COUNTRY:{required:true,maxLength:60},
-                    BIRTH:{required:true,maxLength:10}
+                    USERID:{required:true,maxlength:100},
+                    PASSWORD:{required: true,maxlength:100 },
+                    NAME:{required:true,maxlength:300},
+                    AGE:{required:true,maxlength:10},
+                    GENDER:{required:true,maxlength:10},
+                    ADDRESS:{required:true,maxlength:500},
+                    PHONE:{required:true,maxlength:20},
+                    EMAIL:{required:true,maxlength:100},
+                    COUNTRY:{required:true,maxlength:60},
+                    BIRTH:{required:true,maxlength:10}
                 },
                 messages:{
-                    USERID:{required:"[필수입력사항 입니다.]", maxLength:"30자 이하로 입력 하세요"},
-                    PASSWORD:{required:"필수입력사항 입니다.",maxLength: "20자 이하로 입력 하세요"},
-                    NAME:{required:"필수입력사항 입니다.",maxLength:"100자 이하로 입력 하세요"},
-                    AGE:{required:"필수입력사항 입니다.",maxLength:"10자 이하로 입력 하세요"},
-                    GENDER:{required:"필수입력사항 입니다.",maxLength:"3자 이하로 입력 하세요"},
-                    ADDRESS:{required:"필수입력사항 입니다.",maxLength:"150자 이하로 입력 하세요"},
-                    PHONE:{required:"필수입력사항 입니다.",maxLength:"10자 이하로 입력 하세요"},
-                    EMAIL:{required:"필수입력사항 입니다.",maxLength:"30자 이하로 입력 하세요"},
-                    COUNTRY:{required:"필수입력사항 입니다.",maxLength:"20자 이하로 입력 하세요"},
-                    BIRTH:{required:"필수입력사항 입니다.",maxLength:"10자 이하로 입력 하세요"}
-                },
-
-                errorPlacement: function(error, element) {
-                    console.log('error',error);
+                    USERID:{required:"[필수입력사항 입니다.]", maxlength:"30자 이하로 입력 하세요"},
+                    PASSWORD:{required:"필수입력사항 입니다.",maxlength: "20자 이하로 입력 하세요"},
+                    NAME:{required:"필수입력사항 입니다.",maxlength:"100자 이하로 입력 하세요"},
+                    AGE:{required:"필수입력사항 입니다.",maxlength:"10자 이하로 입력 하세요"},
+                    GENDER:{required:"필수입력사항 입니다.",maxlength:"3자 이하로 입력 하세요"},
+                    ADDRESS:{required:"필수입력사항 입니다.",maxlength:"150자 이하로 입력 하세요"},
+                    PHONE:{required:"필수입력사항 입니다.",maxlength:"10자 이하로 입력 하세요"},
+                    EMAIL:{required:"필수입력사항 입니다.",maxlength:"30자 이하로 입력 하세요"},
+                    COUNTRY:{required:"필수입력사항 입니다.",maxlength:"20자 이하로 입력 하세요"},
+                    BIRTH:{required:"필수입력사항 입니다.",maxlength:"10자 이하로 입력 하세요"}
                 }
+                // errorPlacement: function(error, element) {
+                //     console.log('error',error);
+                // }
+            });
+            $("button").click(function(){
+
+                $("div").text($("form").
+                $.ajax(
+                    {
+                        url: "demo_test.txt"
+                        , type :'post'
+                        , data :{}
+                        , contentType : 'json'
+                        , beforeSend(xhr){
+
+                        }
+                        , dataFilter(data,type){
+
+                        }
+                        , success: function (result) {
+                            $("#div1").html(result);
+                        }
+                        , complete(xhr,status){
+
+                        }
+                        , error(xhr,status,error){
+
+                        }
+                    }
+                );
             });
         });
     </script>
@@ -93,7 +119,8 @@
             <th><input type="text" id="BIRTH" name="BIRTH"/></th>
         </tr>
     </table>
-    <button type="submit" >가입합니다.</button>
+    <button type="submit" >가입 전용 버튼</button>
+    <div1 id="div1"></div1>
 
 </form>
 
