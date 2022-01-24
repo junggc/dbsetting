@@ -15,7 +15,23 @@
     <script type="text/javascript" src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/jquery.validate.min.js"></script>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.3/dist/additional-methods.min.js"></script>
     <script>
+
         $(function (){
+
+
+
+            $( "#button" ).click(function() {
+                var form = $( "#mytable" );
+                form.valid();
+
+            });
+
+
+            $.validator.setDefaults({
+                debug: true,
+                success: "valid"
+            });
+
             $("#mytable").validate({
                 rules:{
                     USERID:{required:true,maxlength:100},
@@ -30,7 +46,7 @@
                     BIRTH:{required:true,maxlength:10}
                 },
                 messages:{
-                    USERID:{required:"[필수입력사항 입니다.]", maxlength:"30자 이하로 입력 하세요"},
+                    USERID:{required:"필수입력사항 입니다.", maxlength:"30자 이하로 입력 하세요"},
                     PASSWORD:{required:"필수입력사항 입니다.",maxlength: "20자 이하로 입력 하세요"},
                     NAME:{required:"필수입력사항 입니다.",maxlength:"100자 이하로 입력 하세요"},
                     AGE:{required:"필수입력사항 입니다.",maxlength:"10자 이하로 입력 하세요"},
@@ -48,7 +64,7 @@
             $("#button").click(function(){
 
                 // $("div").text($("form").
-                alert("가입완료!");
+
                 $.ajax(
                     { //modelattribute로 보내고 json으로 받을떄 start
                         //@ModelAttribute Dto dto
@@ -69,6 +85,9 @@
               //              console.log('success result', result);
 
                             $("#div1").html(result);
+                            console.log(result);
+                            setTimeout(() =>alert("가입완료"),1000);
+                            // alert("가입완료!");
 
                         }
                         , complete(xhr,status){
@@ -127,8 +146,9 @@
             <th><input type="text" id="BIRTH" name="BIRTH"/></th>
         </tr>
     </table>
-    <button type="submit" id="button" >가입 전용 버튼</button>
+    <button type="button" id="button" >가입 전용 버튼</button>
     <div id="div1"></div>
+
 
 </form>
 
